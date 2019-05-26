@@ -1,0 +1,6 @@
+ android:launchMode="singleTask"
+ 1:taskAffinity相同时 清空打开Activity上所有Activity
+ 2:taskAffinity不相同时 打开新的Task栈
+
+ android:launchMode="singleTask" + Intent.FLAG_ACTIVITY_MULTIPLE_TASK可以打开新的Task栈
+ Intent.FLAG_ACTIVITY_NEW_DOCUMENT + Intent.FLAG_ACTIVITY_MULTIPLE_TASK可以打开新的Task栈

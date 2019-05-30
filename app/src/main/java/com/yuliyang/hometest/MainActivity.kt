@@ -1,6 +1,7 @@
 package com.yuliyang.hometest
 
 import android.os.Bundle
+import android.text.PrecomputedText
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -17,11 +18,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val imageData = workDataOf("data" to "haha")
         val uploadWorkRequest = PeriodicWorkRequestBuilder<TestWorker>(16, TimeUnit.MINUTES)
-            .setInputData(imageData)
-            .build()
+                .setInputData(imageData)
+                .build()
 
 
         WorkManager.getInstance().getWorkInfosForUniqueWorkLiveData("unique").observe(this, Observer {
@@ -35,9 +35,9 @@ class MainActivity : AppCompatActivity() {
         })
 
         WorkManager.getInstance().enqueueUniquePeriodicWork(
-            "unique",
-            ExistingPeriodicWorkPolicy.REPLACE,
-            uploadWorkRequest
+                "unique",
+                ExistingPeriodicWorkPolicy.REPLACE,
+                uploadWorkRequest
         )
     }
 

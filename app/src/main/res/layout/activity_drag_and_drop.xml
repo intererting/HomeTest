@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/destView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="300dp"
+        android:background="#f00">
+
+        <View
+            android:id="@+id/dragView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#f0f" />
+    </RelativeLayout>
+
+</LinearLayout>

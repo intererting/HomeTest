@@ -46,5 +46,10 @@ class MainActivity : AppCompatActivity() {
         fragment.show(supportFragmentManager, "")
     }
 
+    override fun onResume() {
+        super.onResume()
+        val modelTest = BuilderModeTest().Builder().name("yuliyang").build()
+        println(modelTest.getName())
+    }
 
 }

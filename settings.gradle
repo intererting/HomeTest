@@ -1,1 +1,1 @@
-include ':app', ':compier'
+include ':app', ':compier', ':dynamic_feature'

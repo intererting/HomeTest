@@ -30,6 +30,27 @@
 
         <service android:name=".sensor.SensorCalService" />
 
+        <activity android:name=".IntentFilterActivity">
+            <intent-filter>
+                <action android:name="testIntentFilter" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="blank"
+                    android:scheme="obj" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".IntentFilterAnotherActivity">
+            <intent-filter>
+                <action android:name="testIntentFilter" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="blank"
+                    android:scheme="obj" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".task.B_Activity"
             android:launchMode="singleTask"

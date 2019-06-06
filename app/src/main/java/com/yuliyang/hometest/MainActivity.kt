@@ -1,5 +1,7 @@
 package com.yuliyang.hometest
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.PrecomputedText
 import android.view.View
@@ -43,7 +45,13 @@ class MainActivity : AppCompatActivity() {
 
     fun jump(view: View) {
 //        startActivity(Intent(this, SecondActivity::class.java))
-        fragment.show(supportFragmentManager, "")
+//        fragment.show(supportFragmentManager, "")
+        val intent = Intent().apply {
+            setAction("testIntentFilter")
+            addCategory(Intent.CATEGORY_DEFAULT)
+            setData(Uri.parse("obj://blank/haha"))
+        }
+        startActivity(intent)
     }
 
     override fun onResume() {

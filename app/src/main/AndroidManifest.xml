@@ -16,7 +16,7 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
         <activity
-                android:name=".security.SecurityActivity"
+                android:name=".TipsActiivty"
                 android:launchMode="singleTask"
                 android:resizeableActivity="true"
                 android:supportsPictureInPicture="true"
